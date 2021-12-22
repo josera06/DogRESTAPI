@@ -7,34 +7,27 @@ import javax.persistence.Id;
 
 @Entity
 public class Dog {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    String Name;
-    String Breed;
-    String Origin;
+    private String name;
+    private String breed;
+    private String origin;
 
-    public Dog(Long id, String Name, String Breed, String Origin) {
+    public Dog(Long id, String name, String breed, String origin) {
         this.id = id;
-        this.Name = Name;
-        this.Breed = Breed;
-        this.Origin = Origin;
+        this.name = name;
+        this.breed = breed;
+        this.origin = origin;
     }
 
-    public Dog(Long id) {
-        this.id = id;
+    public Dog(String name, String breed) {
+        this.name = name;
+        this.breed = breed;
     }
 
-    public Dog(String Name, String Breed, String Origin) {
-        this.Name = Name;
-        this.Breed = Breed;
-        this.Origin = Origin;
-    }
-
-    public Dog() {
-    }
+    public Dog() {}
 
     public Long getId() {
         return id;
@@ -45,28 +38,27 @@ public class Dog {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getBreed() {
-        return Breed;
+        return breed;
     }
 
-    public void setBreed(String Breed) {
-        this.Breed = Breed;
+    public void setBreed(String breed) {
+        this.breed = breed;
     }
 
     public String getOrigin() {
-        return Origin;
+        return origin;
     }
 
-    public void setOrigin(String Origin) {
-        this.Origin = Origin;
+    public void setOrigin(String origin) {
+        this.origin = origin;
     }
-
     
 }
